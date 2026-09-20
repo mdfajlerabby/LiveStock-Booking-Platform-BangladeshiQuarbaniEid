@@ -27,6 +27,7 @@ h1 em { color:var(--green); font-style:normal; }
 .section-head { display:flex; justify-content:space-between; align-items:end; margin-bottom:24px; }
 .section h2 { margin:4px 0 0; font-size:30px; }
 .muted { color:#6d8077; }
+.health-status { color:#2b7951; font-size:13px; margin:8px 0 0; }
 .animal-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 .animal-card { background:#fff; border:1px solid #e8ede3; border-radius:16px; overflow:hidden; box-shadow:0 8px 28px #274b3010; }
 .animal-image { height:190px; width:100%; object-fit:cover; }
