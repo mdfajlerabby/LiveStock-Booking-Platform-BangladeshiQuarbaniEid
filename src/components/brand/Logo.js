@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 export default function Logo() {
   return (
-    <a href="/" className="logo">
+    <Link href="/" className="logo">
       <span className="logo-mark">🐄</span>
       <span>কুরবানীহাট</span>
-    </a>
+    </Link>
   );
 }
