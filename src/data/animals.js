@@ -51,6 +51,32 @@ export const animals = [
     image: "https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=900&q=80",
     description: "বাংলাদেশের জনপ্রিয় ব্ল্যাক বেঙ্গল ছাগল। মাংসের মান ভালো এবং পালন সহজ।",
   },
+  {
+    id: 5,
+    name: "লাল মিয়া",
+    type: "গরু",
+    breed: "লাল সিন্ধি",
+    price: 138000,
+    weight: 310,
+    age: "৩.৫ বছর",
+    location: "কুষ্টিয়া",
+    category: "বড় পশু",
+    image: "https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&w=900&q=80",
+    description: "লালচে রঙের আকর্ষণীয় গরু। দেশি পরিবেশে প্রাকৃতিক খাবারে লালন করা হয়েছে।",
+  },
+  {
+    id: 6,
+    name: "বরেন্দ্র",
+    type: "গরু",
+    breed: "দেশি গরু",
+    price: 98000,
+    weight: 240,
+    age: "২.৫ বছর",
+    location: "নওগাঁ",
+    category: "বড় পশু",
+    image: "https://images.unsplash.com/photo-1560114928-40f299021943?auto=format&fit=crop&w=900&q=80",
+    description: "বরেন্দ্র অঞ্চলের শক্তপোক্ত দেশি গরু। সীমিত বাজেটের পরিবারের জন্য ভালো পছন্দ।",
+  },
 ];
 
 export const formatTaka = (amount) => `৳${amount.toLocaleString("bn-BD")}`;

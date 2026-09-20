@@ -43,6 +43,11 @@ h1 em { color:var(--green); font-style:normal; }
 .tips { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
 .tip { background:#f2f6e7; border-radius:17px; padding:26px; }
 .tip-icon { font-size:28px; }
+.breed-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.breed-card { display:flex; gap:16px; align-items:flex-start; background:#fff; border:1px solid #e8ede3; border-radius:16px; padding:22px; }
+.breed-card h3 { margin:0 0 6px; }
+.breed-card p { margin:0; font-size:14px; line-height:1.6; }
+.breed-number { color:#a27829; font-size:24px; font-weight:900; }
 .footer { background:#153d31; color:#d7e7d7; margin-top:72px; padding:42px 0; }
 .footer .logo { color:#fff; }
 .footer-grid { display:flex; justify-content:space-between; gap:30px; }
@@ -57,10 +62,12 @@ input,textarea,select { width:100%; border:1px solid #dce6dc; border-radius:9px;
 .error-text { color:#b83b2f; background:#fff0ed; padding:10px; border-radius:8px; }
 .success-text { color:#176b43; background:#e9f7e8; padding:10px; border-radius:8px; }
 .notice { background:#f1f6e9; padding:16px; border-radius:10px; }
+.toast-message { position:fixed; right:24px; bottom:24px; z-index:10; max-width:330px; padding:15px 18px; border-radius:10px; background:#176b43; color:#fff; box-shadow:0 8px 24px #17352b33; }
 .notice a,.form-card a { color:var(--green); font-weight:800; }
 .profile-link { color:var(--green); font-weight:700; }
 .booking-form { margin-top:25px; background:#f8fbf2; padding:22px; border-radius:14px; }
 .booking-form h2 { margin-top:0; }
 .avatar-placeholder { width:90px; height:90px; border-radius:50%; background:#e5f0d8; display:grid; place-items:center; font-size:35px; margin:0 auto 12px; }
 @media (max-width:800px) { .navlinks { display:none; } .hero { padding:38px 28px; min-height:500px; } .hero-copy { width:100%; } .hero-image { opacity:.28; width:100%; right:-10%; } .animal-grid { grid-template-columns:repeat(2,1fr); } .footer-grid { flex-direction:column; } }
+@media (max-width:800px) { .breed-grid { grid-template-columns:1fr; } }
 @media (max-width:520px) { .container { width:calc(100% - 28px); } .nav { height:68px; } .nav-actions .btn-soft { display:none; } .hero { border-radius:20px; } .animal-grid,.tips { grid-template-columns:1fr; } .catalog-toolbar { align-items:stretch; flex-direction:column; } .sort-select { width:100%; } h1 { font-size:39px; } }
