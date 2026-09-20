@@ -74,7 +74,7 @@ export const animals = [
     age: "২.৫ বছর",
     location: "নওগাঁ",
     category: "বড় পশু",
-    image: "https://images.unsplash.com/photo-1560114928-40f299021943?auto=format&fit=crop&w=900&q=80",
+    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=900&q=80",
     description: "বরেন্দ্র অঞ্চলের শক্তপোক্ত দেশি গরু। সীমিত বাজেটের পরিবারের জন্য ভালো পছন্দ।",
   },
 ];
