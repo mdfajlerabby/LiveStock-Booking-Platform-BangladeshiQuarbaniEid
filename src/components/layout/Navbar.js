@@ -15,10 +15,32 @@ export default function Navbar() {
       <div className="container nav">
         <Logo />
         <nav className="navlinks" aria-label="প্রধান মেনু">
-          {links.map((link) => <a key={link.href} href={link.href}>{link.label}</a>)}
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </nav>
         <div className="nav-actions">
-          {user ? <><a className="profile-link" href="/my-profile">{user.name}</a><button className="btn btn-soft" onClick={logout}>লগআউট</button></> : <><a className="btn btn-soft" href="/login">লগইন</a><a className="btn btn-primary" href="/register">রেজিস্টার</a></>}
+          {user ? (
+            <>
+              <a className="profile-link" href="/my-profile">
+                {user.name}
+              </a>
+              <button className="btn btn-soft" onClick={logout}>
+                লগআউট
+              </button>
+            </>
+          ) : (
+            <>
+              <a className="btn btn-soft" href="/login">
+                লগইন
+              </a>
+              <a className="btn btn-primary" href="/register">
+                রেজিস্টার
+              </a>
+            </>
+          )}
         </div>
       </div>
     </header>

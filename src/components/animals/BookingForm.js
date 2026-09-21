@@ -1,3 +1,35 @@
 "use client";
-import { useState } from "react"; import { useAuth } from "../auth/AuthProvider"; import Toast from "../feedback/Toast";
-export default function BookingForm({ animal }) { const { user } = useAuth(); const [message, setMessage] = useState(""); if (!user) return <div className="notice">বুকিং করতে <a href="/login">লগইন করুন</a>।</div>; const submit = (e) => { e.preventDefault(); e.currentTarget.reset(); setMessage(`${animal.name} বুকিংয়ের অনুরোধ গ্রহণ করা হয়েছে!`); window.setTimeout(() => setMessage(""), 3500); }; return <><Toast message={message} /><form className="booking-form" onSubmit={submit}><h2>বুকিং করুন</h2><label>আপনার নাম</label><input name="name" defaultValue={user.name} required /><label>ফোন নম্বর</label><input name="phone" required placeholder="০১৭xxxxxxxx" /><label>ঠিকানা</label><textarea name="address" rows="3" required /><button className="btn btn-primary">বুকিং নিশ্চিত করুন</button></form></>; }
+import { useState } from "react";
+import { useAuth } from "../auth/AuthProvider";
+import Toast from "../feedback/Toast";
+export default function BookingForm({ animal }) {
+  const { user } = useAuth();
+  const [message, setMessage] = useState("");
+  if (!user)
+    return (
+      <div className="notice">
+        বুকিং করতে <a href="/login">লগইন করুন</a>।
+      </div>
+    );
+  const submit = (e) => {
+    e.preventDefault();
+    e.currentTarget.reset();
+    setMessage(`${animal.name} বুকিংয়ের অনুরোধ গ্রহণ করা হয়েছে!`);
+    window.setTimeout(() => setMessage(""), 3500);
+  };
+  return (
+    <>
+      <Toast message={message} />
+      <form className="booking-form" onSubmit={submit}>
+        <h2>বুকিং করুন</h2>
+        <label>আপনার নাম</label>
+        <input name="name" defaultValue={user.name} required />
+        <label>ফোন নম্বর</label>
+        <input name="phone" required placeholder="০১৭xxxxxxxx" />
+        <label>ঠিকানা</label>
+        <textarea name="address" rows="3" required />
+        <button className="btn btn-primary">বুকিং নিশ্চিত করুন</button>
+      </form>
+    </>
+  );
+}

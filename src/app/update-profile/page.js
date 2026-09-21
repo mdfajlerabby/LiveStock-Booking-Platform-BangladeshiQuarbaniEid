@@ -1,3 +1,38 @@
 "use client";
-import Navbar from "../../components/layout/Navbar"; import { useAuth } from "../../components/auth/AuthProvider"; import { useRouter } from "next/navigation";
-export default function UpdateProfile() { const { user, updateUser } = useAuth(); const router = useRouter(); if (!user) return <><Navbar /><main className="container profile"><h1>আগে লগইন করুন</h1></main></>; return <><Navbar /><main className="container"><form className="form-card" onSubmit={(e) => { e.preventDefault(); const f = new FormData(e.currentTarget); updateUser({ name: f.get("name") }); router.push("/my-profile"); }}><h1>প্রোফাইল আপডেট</h1><label>নাম</label><input name="name" defaultValue={user.name} required /><button className="btn btn-primary">তথ্য সংরক্ষণ করুন</button></form></main></>; }
+import Navbar from "../../components/layout/Navbar";
+import { useAuth } from "../../components/auth/AuthProvider";
+import { useRouter } from "next/navigation";
+export default function UpdateProfile() {
+  const { user, updateUser } = useAuth();
+  const router = useRouter();
+  if (!user)
+    return (
+      <>
+        <Navbar />
+        <main className="container profile">
+          <h1>আগে লগইন করুন</h1>
+        </main>
+      </>
+    );
+  return (
+    <>
+      <Navbar />
+      <main className="container">
+        <form
+          className="form-card"
+          onSubmit={(e) => {
+            e.preventDefault();
+            const f = new FormData(e.currentTarget);
+            updateUser({ name: f.get("name") });
+            router.push("/my-profile");
+          }}
+        >
+          <h1>প্রোফাইল আপডেট</h1>
+          <label>নাম</label>
+          <input name="name" defaultValue={user.name} required />
+          <button className="btn btn-primary">তথ্য সংরক্ষণ করুন</button>
+        </form>
+      </main>
+    </>
+  );
+}

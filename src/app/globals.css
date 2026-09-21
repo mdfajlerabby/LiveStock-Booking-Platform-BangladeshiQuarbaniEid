@@ -49,6 +49,8 @@ h1 em { color:var(--green); font-style:normal; }
 .breed-card h3 { margin:0 0 6px; }
 .breed-card p { margin:0; font-size:14px; line-height:1.6; }
 .breed-number { color:#a27829; font-size:24px; font-weight:900; }
+.about-page { padding-bottom:40px; }
+.about-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
 .footer { background:#153d31; color:#d7e7d7; margin-top:72px; padding:42px 0; }
 .footer .logo { color:#fff; }
 .footer-grid { display:flex; justify-content:space-between; gap:30px; }
