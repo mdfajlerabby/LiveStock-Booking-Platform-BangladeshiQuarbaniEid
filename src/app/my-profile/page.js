@@ -1,0 +1,34 @@
+"use client";
+import Navbar from "../../components/layout/Navbar";
+import { useAuth } from "../../components/auth/AuthProvider";
+export default function ProfilePage() {
+  const { user, logout } = useAuth();
+  if (!user)
+    return (
+      <>
+        <Navbar />
+        <main className="container profile">
+          <h1>প্রোফাইল দেখতে লগইন করুন</h1>
+          <a className="btn btn-primary" href="/login">
+            লগইন
+          </a>
+        </main>
+      </>
+    );
+  return (
+    <>
+      <Navbar />
+      <main className="container profile">
+        <div className="avatar-placeholder">👤</div>
+        <h1>{user.name}</h1>
+        <p className="muted">{user.email}</p>
+        <a className="btn btn-soft" href="/update-profile">
+          তথ্য আপডেট করুন
+        </a>{" "}
+        <button className="btn btn-primary" onClick={logout}>
+          লগআউট
+        </button>
+      </main>
+    </>
+  );
+}
